@@ -61,30 +61,34 @@ Before proceeding, ensure you have the following installed:
    
 	roslaunch rosbag_reader rosbag_reader.launch
 
-This launch file will:
-o	Start the rosbag_play node to play the specified rosbag file.
+	This launch file will:
 
-o	Start the tcp_server node to listen for incoming data.
+	Start the rosbag_play node to play the specified rosbag file.
 
-o	Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
+	Start the tcp_server node to listen for incoming data.
+
+	Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
 
 
-3.	Verify the output:
+2.	Verify the output:
 
 The TCP server output will be printed in the terminal, showing the received data from the rosbag_reader node.
 
 Manually run the separate nodes,
+
 1.	Start the TCP server:
    
-rosrun rosbag_reader tcp_server
+	rosrun rosbag_reader tcp_server
 
-3.	Play the ROSbag:  
-Rename the rosbag file for your convenience.
+3.	Play the ROSbag:
+     
+	Rename the rosbag file for your convenience.
 
-rosbag play /home/user/ros_ws/src/rosbag_reader.bag
+	rosbag play /home/user/ros_ws/src/rosbag_reader.bag
 
 5.	Start the ROS node:
-rosrun rosbag_reader rosbag_reader
+   
+	rosrun rosbag_reader rosbag_reader
 
 ## ROS Bag
 
@@ -92,15 +96,20 @@ Download the rosbag from the following:-
 	https://drive.google.com/drive/folders/121qGshjIAAgGuKmm3uYHv3SwXey7lXd3
 
 •	Rosbag name: CA-20190828184706_blur_align.bag
+
 Place it in the src directory:
 
 ## Video Demonstration
+
 A video demonstrating the building and running of the ROS package, including the launching of the nodes from the terminal, is available at:
 
 •	ros_ws/video/1.mp4
 
 ## Notes
+
+
 •	Ensure that the rosbag file path is correctly specified in the launch file.
+
 •	The package assumes the server will be running locally on 127.0.0.1 and port 8000.
 
 
