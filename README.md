@@ -9,6 +9,7 @@ The package is implemented in C++ and includes a Dockerfile for easy deployment.
 - [Installation](#installation)
 - [Usage](#usage)
 - [ROS Bag](#ros-bag)
+- [Troubleshooting}(#troubleshooting).
 - [Video Demonstration](#video-demonstration)
 - [Notes](#notes)
 
@@ -98,6 +99,9 @@ Download the rosbag from the following:-
 •	Rosbag file name: CA-20190828184706_blur_align.bag
 
 Place it in the /src directory:
+
+## Troubleshooting
+
 
 ## Video Demonstration
 
