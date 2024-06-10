@@ -9,7 +9,7 @@ The package is implemented in C++ and includes a Dockerfile for easy deployment.
 - [Installation](#installation)
 - [Usage](#usage)
 - [ROS Bag](#ros-bag)
-- [Troubleshooting}(#troubleshooting).
+- [Troubleshooting](#troubleshooting).
 - [Video Demonstration](#video-demonstration)
 - [Notes](#notes)
 
@@ -101,6 +101,13 @@ Download the rosbag from the following:-
 Place it in the /src directory:
 
 ## Troubleshooting
+
+1. 	ROS Environmental Variables Not Set
+   
+Problem: ROS nodes fail to initialize properly due to environmental variables not being set.
+
+Solution: Confirm that the ROS environment variables are correctly sourced in your shell session or Docker container. 
+This typically involves sourcing the setup.bash script in your ROS installation directory (source /opt/ros/<ros_version>/setup.ba
 
 
 ## Video Demonstration
