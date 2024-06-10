@@ -61,13 +61,13 @@ Before proceeding, ensure you have the following installed:
    
 		roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag 
 
-	 This launch file will:
+	This launch file will:
 
-	 1.1 	Start the rosbag_play node to play the specified rosbag file.
+ Start the rosbag_play node to play the specified rosbag file.
 
-	 1.2 	Start the tcp_server node to listen for incoming data.
+ Start the tcp_server node to listen for incoming data.
 
-	 1.3 	Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
+ Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
 
 
 2.	Verify the output:
@@ -95,9 +95,9 @@ Before proceeding, ensure you have the following installed:
 Download the rosbag from the following:-
 	https://drive.google.com/drive/folders/121qGshjIAAgGuKmm3uYHv3SwXey7lXd3
 
-•	Rosbag name: CA-20190828184706_blur_align.bag
+•	Rosbag file name: CA-20190828184706_blur_align.bag
 
-Place it in the src directory:
+Place it in the /src directory:
 
 ## Video Demonstration
 
