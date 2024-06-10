@@ -82,8 +82,8 @@ rosrun rosbag_reader rosbag_reader
 
 ## ROS Bag
 
-Download the rosbag from the following:
-•	https://drive.google.com/drive/folders/121qGshjIAAgGuKmm3uYHv3SwXey7lXd3
+Download the rosbag from the following:-
+	https://drive.google.com/drive/folders/121qGshjIAAgGuKmm3uYHv3SwXey7lXd3
 
 •	Rosbag name: CA-20190828184706_blur_align.bag
 Place it in the src directory:
