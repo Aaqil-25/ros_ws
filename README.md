@@ -60,7 +60,7 @@ Before proceeding, ensure you have the following installed:
 
 1.	Run the launch file to start the nodes:
 
-   write the bag file location with roslaunch command.
+   	Write the bag file location with roslaunch command.
    
 		roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag 
 
