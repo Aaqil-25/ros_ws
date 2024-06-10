@@ -25,7 +25,7 @@ This package includes:
 
 ### Codebase Structure
 - **TcpServer**:
-  Implements a basic TCP server that listens for incoming data. By creating a separate server class, we ensure that the server logic is encapsulated and can be easily modified or extended.
+  Implements a basic TCP server that listens for incoming data. By creating a separate server class, ensure that the server logic is encapsulated and can be easily modified or extended.
 - **DataSender**:
   This class is solely responsible for managing the connection to the TCP server and sending data. This design allows for easy modifications or replacements of the data transmission method without affecting other parts of the code.
 - **rosbag_reader**:
@@ -133,7 +133,7 @@ Place it in the /ros_ws/src directory:
 
 ## Video Demonstration
 
-A video demonstrating the building and running of the ROS package, including the launching of the nodes from the terminal, is available at:
+A video demonstrating the building and running of the ROS package, including the launching of the nodes from the terminal, is available at:-
 	
  	https://drive.google.com/file/d/1_nqbWMQXQoI0ozgSerSH4irqSETlYjm6/view?usp=drive_link
 
