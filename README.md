@@ -1,6 +1,7 @@
 # ROS Bag Reader Package
 
-This repository contains a ROS1 package that reads data from a rosbag file and sends it to a server using TCP. The package is implemented in C++ and includes a Dockerfile for easy deployment.
+This repository contains a ROS1 package that reads data from a rosbag file and sends it to a server using TCP. 
+The package is implemented in C++ and includes a Dockerfile for easy deployment.
 
 ## Table of Contents
 - [Description](#description)
