@@ -133,9 +133,7 @@ Place it in the /ros_ws/src directory:
 
 ## Video Demonstration
 
-A video demonstrating the building and running of the ROS package, including the launching of the nodes from the terminal, is available at:-
-	
- 	https://drive.google.com/file/d/1_nqbWMQXQoI0ozgSerSH4irqSETlYjm6/view?usp=drive_link
+A video demonstrating the building and running of the ROS package, including the launching of the nodes from the terminal, is available at:-https://drive.google.com/file/d/1_nqbWMQXQoI0ozgSerSH4irqSETlYjm6/view?usp=drive_link
 
 •	video/1.mp4
 
