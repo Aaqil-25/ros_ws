@@ -49,11 +49,11 @@ Before proceeding, ensure you have the following installed:
 
 1.	Build the Docker image:
    
-    docker build -t rosbag_reader_image .
+    	docker build -t rosbag_reader_image .
 
 3.	Run the Docker container:
    
-    docker run -it rosbag_reader_image
+    	docker run -it rosbag_reader_image
 
 ## Usage
 
@@ -61,13 +61,13 @@ Before proceeding, ensure you have the following installed:
    
 		roslaunch rosbag_reader rosbag_reader.launch
 
-		This launch file will:
+	This launch file will:
 
-			Start the rosbag_play node to play the specified rosbag file.
+	Start the rosbag_play node to play the specified rosbag file.
 
-			Start the tcp_server node to listen for incoming data.
+	Start the tcp_server node to listen for incoming data.
 
-			Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
+	Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
 
 
 2.	Verify the output:
@@ -76,19 +76,19 @@ The TCP server output will be printed in the terminal, showing the received data
 
 Manually run the separate nodes,
 
-	1.	Start the TCP server:
+1.	Start the TCP server:
    
 		rosrun rosbag_reader tcp_server
 
-	2.	Play the ROSbag:
+2.	Play the ROSbag:
      
-		Rename the rosbag file for your convenience.
+	Rename the rosbag file for your convenience.
 
 		rosbag play /home/user/ros_ws/src/rosbag_reader.bag
 
-	3.	Start the ROS node:
+3.	Start the ROS node:
    
-	rosrun rosbag_reader rosbag_reader
+		rosrun rosbag_reader rosbag_reader
 
 ## ROS Bag
 
@@ -111,6 +111,7 @@ A video demonstrating the building and running of the ROS package, including the
 •	Ensure that the rosbag file path is correctly specified in the launch file.
 
 •	The package assumes the server will be running locally on 127.0.0.1 and port 8000.
+
 
 
 
