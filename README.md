@@ -61,32 +61,32 @@ Before proceeding, ensure you have the following installed:
    
 		roslaunch rosbag_reader rosbag_reader.launch
 
-	This launch file will:
+	 This launch file will:
 
-	Start the rosbag_play node to play the specified rosbag file.
+	 1.1 Start the rosbag_play node to play the specified rosbag file.
 
-	Start the tcp_server node to listen for incoming data.
+	 1.2 Start the tcp_server node to listen for incoming data.
 
-	Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
+	 1.3 Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
 
 
 2.	Verify the output:
 
-The TCP server output will be printed in the terminal, showing the received data from the rosbag_reader node.
+	The TCP server output will be printed in the terminal, showing the received data from the rosbag_reader node.
 
-Manually run the separate nodes,
+	Manually run the separate nodes,
 
-1.	Start the TCP server:
+	2.1	Start the TCP server:
    
 		rosrun rosbag_reader tcp_server
 
-2.	Play the ROSbag:
+	2.2	Play the ROSbag:
      
 	Rename the rosbag file for your convenience.
 
 		rosbag play /home/user/ros_ws/src/rosbag_reader.bag
 
-3.	Start the ROS node:
+	2.3	Start the ROS node:
    
 		rosrun rosbag_reader rosbag_reader
 
