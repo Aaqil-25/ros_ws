@@ -63,11 +63,11 @@ Before proceeding, ensure you have the following installed:
 
 	This launch file will:
 
- Start the rosbag_play node to play the specified rosbag file.
+ 	Start the rosbag_play node to play the specified rosbag file.
 
- Start the tcp_server node to listen for incoming data.
+ 	Start the tcp_server node to listen for incoming data.
 
- Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
+ 	Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
 
 
 2.	Verify the output:
