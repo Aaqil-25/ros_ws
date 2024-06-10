@@ -9,7 +9,7 @@ The package is implemented in C++ and includes a Dockerfile for easy deployment.
 - [Installation](#installation)
 - [Usage](#usage)
 - [ROS Bag](#ros-bag)
-- [Troubleshooting](#troubleshooting).
+- [Troubleshooting](#troubleshooting)
 - [Video Demonstration](#video-demonstration)
 - [Notes](#notes)
 
