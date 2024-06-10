@@ -123,7 +123,11 @@ Place it in the /ros_ws/src directory:
    
 	Problem: Errors related to permissions during package installation or execution.
 
-	Assist: Run the installation commands with appropriate permissions. If you experience permission errors when running docker commands, consider using sudo, or adjust the file and directory permissions 	with chmod or chown.
+	Assist: Run the installation commands with appropriate permissions. If you experience permission errors when running docker commands, consider using sudo,
+
+ 		sudo docker run
+
+ 	or adjust the file and directory permissions 	with chmod or chown.
 
 		chmod 755 script.sh
 
