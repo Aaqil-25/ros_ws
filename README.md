@@ -77,7 +77,13 @@ Before proceeding, ensure you have the following installed:
 
 	The TCP server output will be printed in the terminal, showing the received data from the rosbag_reader node.
 
-	Manually run the separate nodes,
+	start the roscore in a new terminal for node communication.
+
+		roscore 
+
+	Manually run the separate nodes, 
+
+
 
 	2.1	Start the TCP server:
    
