@@ -127,7 +127,7 @@ Place it in the /ros_ws/src directory:
 
  		sudo docker run
 
- 	or adjust the file and directory permissions 	with chmod or chown.
+ 	or adjust the file and directory permissions with chmod or chown.
 
 		chmod 755 script.sh
 
