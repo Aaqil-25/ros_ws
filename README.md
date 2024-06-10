@@ -66,7 +66,7 @@ o	Start the rosbag_reader node to read data from the rosbag and send it to the T
 
 2.	Verify the output:
 
-o	The TCP server output will be printed in the terminal, showing the received data from the rosbag_reader node.
+The TCP server output will be printed in the terminal, showing the received data from the rosbag_reader node.
 
 Manually run the separate nodes,
 1.	Start the TCP server:
