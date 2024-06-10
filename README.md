@@ -106,7 +106,7 @@ Download the rosbag from the following:-
 
 •	Rosbag file name: CA-20190828184706_blur_align.bag
 
-Place it in the /src directory:
+Place it in the /ros_ws/src directory:
 
 ## Troubleshooting
 
