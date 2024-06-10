@@ -10,8 +10,7 @@ This repository contains a ROS1 package that reads data from a rosbag file and s
 - [ROS Bag](#ros-bag)
 - [Video Demonstration](#video-demonstration)
 - [Notes](#notes)
-- [Contributing](#contributing)
-- [Licensing](#licensing)
+
 
 ## Description
 
@@ -49,11 +48,11 @@ Before proceeding, ensure you have the following installed:
 
 1.	Build the Docker image:
    
-docker build -t rosbag_reader_image .
+    docker build -t rosbag_reader_image .
 
 3.	Run the Docker container:
    
-docker run -it rosbag_reader_image
+    docker run -it rosbag_reader_image
 
 ## Usage
 
@@ -74,7 +73,7 @@ Manually run the separate nodes,
 rosrun rosbag_reader tcp_server
 
 3.	Play the ROSbag:  
-Rename the rosbag file for your conivinence.
+Rename the rosbag file for your convenience.
 
 rosbag play /home/user/ros_ws/src/rosbag_reader.bag
 
@@ -85,11 +84,13 @@ rosrun rosbag_reader rosbag_reader
 
 Download the rosbag from the following:
 •	https://drive.google.com/drive/folders/121qGshjIAAgGuKmm3uYHv3SwXey7lXd3
+
 •	Rosbag name: CA-20190828184706_blur_align.bag
 Place it in the src directory:
 
 ## Video Demonstration
 A video demonstrating the building and running of the ROS package, including the launching of the nodes from the terminal, is available at:
+
 •	ros_ws/video/1.mp4
 
 ## Notes
