@@ -59,6 +59,8 @@ Before proceeding, ensure you have the following installed:
 ## Usage
 
 1.	Run the launch file to start the nodes:
+
+   write the bag file location with roslaunch command.
    
 		roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag 
 
@@ -71,7 +73,7 @@ Before proceeding, ensure you have the following installed:
  	Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
 
 
-2.	Verify the output:
+3.	Verify the output:
 
 	The TCP server output will be printed in the terminal, showing the received data from the rosbag_reader node.
 
