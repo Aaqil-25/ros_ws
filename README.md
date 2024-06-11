@@ -6,9 +6,9 @@ The package is implemented in C++ and includes a Dockerfile for easy deployment.
 ## Table of Contents
 - [Description](#description)
 - [Design Choices](#design-choices)
+- [ROS Bag](#ros-bag)
 - [Installation](#installation)
 - [Usage](#usage)
-- [ROS Bag](#ros-bag)
 - [Troubleshooting](#troubleshooting)
 - [Video Demonstration](#video-demonstration)
 - [Notes](#notes)
@@ -45,6 +45,15 @@ This package includes:
 Before proceeding, ensure you have the following installed:
 - Docker
 - ROS Noetic (if running without Docker)
+  
+## ROS Bag
+
+Download the rosbag from the following:-
+	https://drive.google.com/drive/folders/121qGshjIAAgGuKmm3uYHv3SwXey7lXd3
+
+•	Rosbag file name: CA-20190828184706_blur_align.bag
+
+Place it in the /ros_ws/src directory:
 
 ## Installation
 
@@ -104,14 +113,6 @@ Before proceeding, ensure you have the following installed:
    
 		rosrun rosbag_reader rosbag_reader
 
-## ROS Bag
-
-Download the rosbag from the following:-
-	https://drive.google.com/drive/folders/121qGshjIAAgGuKmm3uYHv3SwXey7lXd3
-
-•	Rosbag file name: CA-20190828184706_blur_align.bag
-
-Place it in the /ros_ws/src directory:
 
 ## Troubleshooting
 
