@@ -70,10 +70,13 @@ Place it in the `/home/user/ros_ws/src` directory:
     ```sh
     docker run -it rosbag_reader_image roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag 
     ```
-
+ ps: Don't modify the rosbag file location in the above code.
+ 
 ## Usage
 
 1. **Run the launch file to start the nodes**:
+   
+   please update the file location in the below code by user name.
     ```sh
     roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag
     ```
@@ -83,15 +86,15 @@ Place it in the `/home/user/ros_ws/src` directory:
     - Start the `tcp_server` node to listen for incoming data.
     - Start the `rosbag_reader` node to read data from the rosbag and send it to the TCP server.
 
-2. **Verify the output**:
+3. **Verify the output**:
     - The TCP server output will be printed in the terminal, showing the received data from the `rosbag_reader` node.
 
-3. **Start `roscore` in a new terminal for node communication**:
+4. **Start `roscore` in a new terminal for node communication**:
     ```sh
     roscore 
     ```
 
-4. **Manually run the separate nodes**:
+5. **Manually run the separate nodes**:
     - Start the TCP server:
         ```sh
         rosrun rosbag_reader tcp_server
