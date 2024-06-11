@@ -56,6 +56,10 @@ Before proceeding, ensure you have the following installed:
 3.	Run the Docker container:
    
     	docker run -it rosbag_reader_image
+  	
+  	or Directly start the roslaunch file with this,
+
+		docker run -it rosbag_reader_image roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag 
 
 ## Usage
 
