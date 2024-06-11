@@ -70,13 +70,20 @@ Place it in the `/home/user/ros_ws/src` directory:
     ```sh
     docker run -it rosbag_reader_image roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag 
     ```
+ 
+ 
  ps: Don't modify the rosbag file location in the above code.
+ 
  
 ## Usage
 
 1. **Run the launch file to start the nodes**:
+
+   
    
    please update the file location in the below code by user name.
+
+
     ```sh
     roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag
     ```
