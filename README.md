@@ -50,6 +50,7 @@ Before proceeding, ensure you have the following installed:
 
 1.	Build the Docker image:
    
+        cd src/  
     	docker build -t rosbag_reader_image .
 
 3.	Run the Docker container:
