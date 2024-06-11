@@ -13,7 +13,6 @@ The package is implemented in C++ and includes a Dockerfile for easy deployment.
 - [Video Demonstration](#video-demonstration)
 - [Notes](#notes)
 
-
 ## Description
 
 This package includes:
@@ -49,108 +48,92 @@ Before proceeding, ensure you have the following installed:
 ## ROS Bag
 
 Download the rosbag from the following:-
-	https://drive.google.com/drive/folders/121qGshjIAAgGuKmm3uYHv3SwXey7lXd3
+[Google Drive](https://drive.google.com/drive/folders/121qGshjIAAgGuKmm3uYHv3SwXey7lXd3)
 
-•	Rosbag file name: CA-20190828184706_blur_align.bag
+**Rosbag file name**: `CA-20190828184706_blur_align.bag`
 
-Place it in the /ros_ws/src directory:
+Place it in the `/home/user/ros_ws/src` directory:
 
 ## Installation
 
-1.	Build the Docker image:
-   
-        cd ros_ws/src/  
-    	docker build -t rosbag_reader_image .
+1. **Build the Docker image**:
+    ```sh
+    cd /home/user/ros_ws/src/
+    docker build -t rosbag_reader_image .
+    ```
 
-3.	Run the Docker container:
-   
-    	docker run -it rosbag_reader_image
-  	
-  	or directly start the roslaunch file with this,
-
-		docker run -it rosbag_reader_image roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag 
+2. **Run the Docker container**:
+    ```sh
+    docker run -it rosbag_reader_image
+    ```
+   Or directly start the roslaunch file with:
+    ```sh
+    docker run -it rosbag_reader_image roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag 
+    ```
 
 ## Usage
 
-1.	Run the launch file to start the nodes:
+1. **Run the launch file to start the nodes**:
+    ```sh
+    roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag
+    ```
 
-   	Write the bag file location with roslaunch command.
-   
-		roslaunch rosbag_reader rosbag_reader.launch bag_file:=/home/user/ros_ws/src/rosbag_reader.bag 
+    This launch file will:
+    - Start the `rosbag_play` node to play the specified rosbag file.
+    - Start the `tcp_server` node to listen for incoming data.
+    - Start the `rosbag_reader` node to read data from the rosbag and send it to the TCP server.
 
-	This launch file will:
+2. **Verify the output**:
+    - The TCP server output will be printed in the terminal, showing the received data from the `rosbag_reader` node.
 
- 	Start the rosbag_play node to play the specified rosbag file.
+3. **Start `roscore` in a new terminal for node communication**:
+    ```sh
+    roscore 
+    ```
 
- 	Start the tcp_server node to listen for incoming data.
-
- 	Start the rosbag_reader node to read data from the rosbag and send it to the TCP server.
-
-
-3.	Verify the output:
-
-	The TCP server output will be printed in the terminal, showing the received data from the rosbag_reader node.
-
-	start the roscore in a new terminal for node communication.
-
-		roscore 
-
-	Manually run the separate nodes, 
-
-
-
-	2.1	Start the TCP server:
-   
-		rosrun rosbag_reader tcp_server
-
-	2.2	Play the ROSbag:
-     
-	Rename the rosbag file for your convenience.
-
-		rosbag play /home/user/ros_ws/src/rosbag_reader.bag
-
-	2.3	Start the ROS node:
-   
-		rosrun rosbag_reader rosbag_reader
-
+4. **Manually run the separate nodes**:
+    - Start the TCP server:
+        ```sh
+        rosrun rosbag_reader tcp_server
+        ```
+    - Play the ROSbag:
+        ```sh
+        rosbag play /home/user/ros_ws/src/rosbag_reader.bag
+        ```
+    - Start the ROS node:
+        ```sh
+        rosrun rosbag_reader rosbag_reader
+        ```
 
 ## Troubleshooting
 
-1. 	ROS Environmental Variables Not Set
-   
-	Problem: ROS nodes fail to initialize properly due to environmental variables not being set.
+1. **ROS Environmental Variables Not Set**:
+    - Problem: ROS nodes fail to initialize properly due to environmental variables not being set.
+    - Solution: Confirm that the ROS environment variables are correctly sourced in your shell session or Docker container. This typically involves sourcing the `setup.bash` script in your ROS installation directory:
+        ```sh
+        source /opt/ros/<ros_version>/setup.bash
+        ```
 
-	Solution: Confirm that the ROS environment variables are correctly sourced in your shell session or Docker container. 
-	This typically involves sourcing the setup.bash script in your ROS installation directory 
-					
-     	source /opt/ros/<ros_version>/setup.bash
-
-2. 	Permissions Errors During Installation
-   
-	Problem: Errors related to permissions during package installation or execution.
-
-	Assist: Run the installation commands with appropriate permissions. If you experience permission errors when running docker commands, consider using sudo,
-
- 		sudo docker run
-
- 	or adjust the file and directory permissions with chmod or chown.
-
-		chmod 755 script.sh
+2. **Permissions Errors During Installation**:
+    - Problem: Errors related to permissions during package installation or execution.
+    - Solution: Run the installation commands with appropriate permissions. If you experience permission errors when running docker commands, consider using `sudo`:
+        ```sh
+        sudo docker run
+        ```
+      Or adjust the file and directory permissions with `chmod` or `chown`:
+        ```sh
+        chmod 755 script.sh
+        ```
 
 ## Video Demonstration
 
-A video demonstrating the building and running of the ROS package, including the launching of the nodes from the terminal, is available at:-https://drive.google.com/file/d/1_nqbWMQXQoI0ozgSerSH4irqSETlYjm6/view?usp=drive_link
+A video demonstrating the building and running of the ROS package, including the launching of the nodes from the terminal, is available at:
+[Google Drive Video](https://drive.google.com/file/d/1_nqbWMQXQoI0ozgSerSH4irqSETlYjm6/view?usp=drive_link)
 
-•	video/1.mp4
+**File**: `video/1.mp4`
 
 ## Notes
 
-
-•	Ensure that the rosbag file path is correctly specified in the launch file.
-
-•	The package assumes the server will be running locally on 127.0.0.1 and port 8000.
-
-
-
-
+- Ensure that the rosbag file path is correctly specified in the launch file.
+- The package assumes the server will be running locally on `127.0.0.1` and port `8000`.
 
