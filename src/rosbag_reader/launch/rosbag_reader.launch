@@ -1,0 +1,15 @@
+<launch>
+  <!-- Launch the rosbag playback node -->
+
+  <arg name="bag_file" default="$(find rosbag_reader)/rosbag_reader.bag" />
+  <node pkg="rosbag" type="play" name="rosbag_play" args="$(arg bag_file)"  />
+
+  <!-- Launch the TCP server node and output to screen -->
+
+  <node pkg="rosbag_reader" type="tcp_server" name="tcp_server" output="screen" required="true" />
+
+  <!-- Launch the rosbag_reader -->
+
+  <node pkg="rosbag_reader" type="rosbag_reader" name="rosbag_reader" required="true">
+  </node>
+</launch>
